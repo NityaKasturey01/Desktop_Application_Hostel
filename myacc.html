@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Avantika Hostelites</title>
+    <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+         <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+          <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>  
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+      <script>
+          $(document).ready(function(){
+              $("#loginsuccess").delay(1000).fadeOut();
+              $("#myacc").hover(function(){ $(this).css("color", "white");});
+              $("#dashboard").hover(function(){ $(this).css("color", "white");});
+              $("#dashboard").mouseleave(function(){$(this).css("color", "black");});
+              $("#transport").hover(function(){ $(this).css("color", "white");});
+              $("#transport").mouseleave(function(){$(this).css("color", "black");});
+              $("#housekeeping").hover(function(){ $(this).css("color", "white");});
+              $("#housekeeping").mouseleave(function(){$(this).css("color", "black");});
+              $("#logout").hover(function(){ $(this).css("background-color", "LightSalmon");})
+              $("#logout").mouseleave(function(){$(this).css("background-color", "#FFE786");});
+              $("#add").click(function(){$(this).css("background-color", "#FB9D5F");});
+              $("#add").click(function(){$(this).css("color", "white");});
+              $("#add").click(function(){$("#issues").css("background-color", "#F8F9FA");});
+              $("#add").click(function(){$("#issues").css("color", "black");});
+              $("#add").click(function(){$(".secondDiv").css("visibility", "visible");});
+              $("#add").click(function(){$(".firstDiv").css("visibility", "hidden");});
+              $("#issues").on('click', function (event){ 
+                $(this).css("color", "white");
+                $("#add").css("background-color", "#F8F9FA");
+                $("#add").css("color", "black");
+                $(".secondDiv").css("visibility", "hidden");
+                $(".firstDiv").css("visibility", "visible");
+              });
+              $("#issues").click(function(){$(this).css("background-color", "#FB9D5F");});
+              $("#issues").mouseover(function(){$(this).css("color", "orange");})
+              $("#issues").mouseleave(function(){$(this).css("color", "black");})
+              // $("#issues").click(function(){$(this).css("color", "white");});
+              //$("#issues").click(function(){$("#issues").css("background-color", "#F8F9FA");});
+              // $("#add").click(function(){$("#issues").css("color", "black");});
+              // $("#add").click(function(){$(".secondDiv").css("visibility", "visible");});
+              // $("#add").click(function(){$(".firstDiv").css("visibility", "hidden");});
+          });
+      </script>
+
+      <!--Login Successfull Popup-->
+    <section class="vh-100" style="background-color: white;">
+      <div class="container-fluid py-4 h-100 w-100" style="background-color: white;">
+
+        
+      
+        <div class="row" style="height: 12%;">     
+            <div class="col-2 col-md-25" style="background-color: white;">
+              <img src="logo.JPG" class="img-fluid rounded mx-auto" width="65%">
+            </div>
+            <div class="col-16 col-md-10">
+              <div class="row" style="height: 25%;">
+                <div class="col-8">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 100%;">
+                    <a class="navbar-brand" href="#"></a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a id="issues" class="nav-item nav-link active" href="#" style="background-color: #FB9D5F; color: white;">Student Issues <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link"></a>
+                        <a id="add" class="nav-item nav-link" href="#">Add Issue</a>
+                        <a class="nav-item nav-link"></a>
+                        <a id="material" class="nav-item nav-link" href="#">Material</a>
+                        <a class="nav-item nav-link"></a>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+
+                <div class="col-4 align-items-right">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h6 class="card-title">Status of Issues</h>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="height: 91%;">
+          <div class="col-2 col-md-25" style="background-color: #FFE786;">
+            <nav class="nav flex-column">
+              <button id="housekeeping" class="btn text-sm-left left-nav-app" style="margin-top: 5%; " onclick="window.location.href='housekeeping.html'"><i class="fa fa-building"></i> Housekeeping</button>
+              <button id="transport" class="btn text-sm-left left-nav-app" style="margin-top: 5%;"><i class="fa fa-bus"></i> Transport</button>
+              <button id="dashboard" class="btn text-sm-left left-nav-app" style="margin-top: 5%;"><i class="fa fa-tasks"></i> Tasks</button>
+              <button id="myacc" class="btn text-sm-left left-nav-app" style="margin-top: 5%; background-color: #223A53; color: white;"><i class="fa fa-user"></i>My Account</button>
+            </nav>
+            <button id="logout" onclick="window.location.href='index.html'" class="btn text-sm-left" style="position: absolute; bottom: 0;width: 88%;margin-bottom: 2%;"><i class="fa fa-sign-out"></i>Logout</button>
+          </div>
+
+
+          <div class="col-16 col-md-10"style="background-color: white;padding: 3%">
+            <div class='wrapper'>
+              <div class='firstDiv' style="background-color:  wheat; "> 
+              </div>
+              <div class='secondDiv container-fluid' style="background-color: rgb(172, 147, 172); visibility: hidden;">
+                <h2>Add a Student Issue</h2><br><br>
+                <div>
+                  <form id="issueform" class="needs-validation" novalidate>
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Enrolment Number</label>
+                        <input type="text" class="form-control" id="enrolmentno" placeholder="Enrolment Number" value="" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Student Name</label>
+                        <input type="text" class="form-control" id="studentname" placeholder="Student Name" value="" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3" style="margin-left: 10px; margin-top: 10px;">
+                        <label for="validationCustomUsername">Building Name</label><br>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="aavaas1" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline1">Aavaas I</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="aavaas2" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline2">Aavaas II</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Room Number</label>
+                        <input type="text" class="form-control" id="roomno" placeholder="Room Number" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="validationCustom04">Date</label>
+                        <input type="text" class="form-control" id="date" placeholder="Date" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Date.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="exampleFormControlSelect1">Select Category</label>
+                        <select class="form-control" id="category">
+                          <option>Furniture</option>
+                          <option>Electrical Components</option>
+                          <option>Others</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label>Student Concern</label>
+                        <textarea class="form-control" id="issue" placeholder="Enter your Issue here" required></textarea>
+                        <div class="invalid-feedback">
+                          Please enter a valid text area.
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="form-group">
+                      
+                    </div>
+                    <button class="btn btn-primary" type="submit" onclick="AddIssue()">Submit form</button>
+                  </form>
+                </div>
+              </div>
+           </div>
+          </div>
+
+        </div>
+       
+      </div>
+      
+    </section>
+      <script>
+        function AddIssue() {
+      var enrol = document.getElementById('enrolmentno').value;
+      var name = document.getElementById('studentname').value;
+      var aavaas1 = document.getElementById('aavaas1');
+      var aavaas2 = document.getElementById('aavaas2');
+      var roomno = document.getElementById('roomno').value;
+      var date = document.getElementById('date').value;
+      var e = document.getElementById("category");
+      var cat = e.options[e.selectedIndex].text;
+      var issue = document.getElementById('issue').value;
+
+      if (category == '') {
+          console.log('Error!', 'Values cannot be empty');
+          return
+      }
+
+      
+
+      var mysql = require('mysql');
+      var config = require("./db-config");
+
+      // Add the credentials to access your database
+      var connection = mysql.createConnection(config.db);
+
+      // connect to mysql
+      connection.connect(function (err) {
+          // in case of error
+          if (err) {
+              console.log(err.code);
+              console.log(err.fatal);
+          }
+      });
+
+      $query = 'INSERT INTO `housekeeping_issues`(`Issue_ID`, `Date`, `Category`, `Student_Concern`, `Admin_Email`) VALUES ("HI008","date","' + cat + '","' + issue + '","admin")';
+
+      connection.query($query, function (err, rows, fields) {
+          if (err) {
+              console.log("An error occurred performing the query.");
+              console.log(err);
+              return;
+          }else{
+              console.log("Issue Inserted Successfully");
+              document.getElementById("issueform").reset();
+          }
+
+          console.log("Query successfully executed");
+      });
+
+      // Close the connection
+      connection.end(function () {
+          // The connection has been closed
+      });
+
+      // display notification
+     console.log('Done!', 'user login successfully');
+  }
+
+
+
+      </script>
+  
+  </body>
+</html>
